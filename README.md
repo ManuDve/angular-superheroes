@@ -4,7 +4,7 @@ Este proyecto Angular es una combinación del proyecto de [API REST con Microser
 
 ## ¿De qué se trata?
 
-Este es un proyecto ultra secreto en el cual se recopila información clasificada acerca de las organizaciones de superhéroes conocidas de la franquicia de Marvel. Presenta una base de datos en memoria H2 que muestra la información sobre algunos superhéroes y sus organizaciones. ¡Esta información es de tipo clasificada!
+Este es un proyecto ultra secreto en el cual se recopila información clasificada acerca de las organizaciones de superhéroes conocidas de la franquicia de Marvel. Presenta una base de datos que muestra la información sobre algunas organizaciones. ¡Esta información es de tipo clasificada!
 
 ## Cómo ejecutar
 
