@@ -1,0 +1,21 @@
+<div class="table responsive my-5">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col" class="py-4">ID</th>
+        <th scope="col" class="py-4">Nombre</th>
+        <th scope="col" class="py-4">Visibilidad</th>
+        <th scope="col" class="py-4">Primera Aparición</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let organizacion of organizaciones">
+        <th scope="row" class="py-4">{{ organizacion.id }}</th>
+        <td class="py-4">{{ organizacion.nombre }}</td>
+        <td class="py-4" [attr.estado]="organizacion.publico">{{ organizacion.publico ? "Público" : "Oculto" }}</td>
+        <td class="py-4">{{ organizacion.fecha }}</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

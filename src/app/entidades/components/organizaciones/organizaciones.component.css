@@ -1,0 +1,12 @@
+th, td {
+  background-color: var(--main-bg-1)!important;
+}
+
+td[estado*="true"] {
+  color: var(--text-color-4);
+}
+
+td[estado*="false"] {
+  color: var(--text-color-3);
+}
+

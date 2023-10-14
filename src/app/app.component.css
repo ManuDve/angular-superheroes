@@ -1,0 +1,6 @@
+.marvel-banner {
+  width: 100%;
+  min-height: 300px;
+  background: url(./../assets/marvel_2.jpg) no-repeat center bottom fixed;
+}
+
