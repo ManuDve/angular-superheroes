@@ -6,6 +6,7 @@
         <th scope="col" class="py-4">Nombre</th>
         <th scope="col" class="py-4">Visibilidad</th>
         <th scope="col" class="py-4">Primera Aparición</th>
+        <th scope="col" class="py-4">Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,9 @@
         <td class="py-4">{{ organizacion.nombre }}</td>
         <td class="py-4" [attr.estado]="organizacion.publico">{{ organizacion.publico ? "Público" : "Oculto" }}</td>
         <td class="py-4">{{ organizacion.fecha }}</td>
+        <td class="py-4">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+        </td>
       </tr>
     </tbody>
 

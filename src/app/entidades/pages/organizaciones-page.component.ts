@@ -21,6 +21,5 @@ export class OrganizacionesPageComponent implements OnInit {
 
   ngOnInit() {
     this.organizacionService.listarOrganizaciones();
-    console.log(this.organizaciones)
   }
 }

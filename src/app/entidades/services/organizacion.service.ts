@@ -16,7 +16,6 @@ export class OrganizacionService {
     this.http.get<Organizacion[]>(this.apiUrl)
     .subscribe( r=> {
       this.organizacionList = r;
-      console.log(this.organizacionList)
     })
   }
 }
