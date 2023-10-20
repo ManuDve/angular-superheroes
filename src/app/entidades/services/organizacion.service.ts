@@ -18,4 +18,14 @@ export class OrganizacionService {
       this.organizacionList = r;
     })
   }
+
+  deleteOrganizacion(id:number):void {
+    this.http.delete<Organizacion>(`${this.apiUrl}/${id}`)
+    .subscribe(
+      ()=> {
+        alert('Eliminado correctamente')
+        this.listarOrganizaciones();
+      }
+    )
+  }
 }
