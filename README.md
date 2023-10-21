@@ -13,4 +13,5 @@ Este es un proyecto ultra secreto en el cual se recopila información clasificad
 3. Instalar Angular CLI con el comando `npm install -g @angular/cli`
 4. Clonar este repositorio con `git clone https://github.com/ManuDve/api-microservicios.git`
 5. Ejecutar el comando `npm i` para instalar las dependencias  y luego `ng serve` para iniciar el proyecto.
-6. Acceder con un navegador a través de la URL: [http://localhost:4200/](http://localhost:4200/)
+6. (Opcional) Para testing, cambiar a la rama de testing con `git checkout testing`
+7. Acceder con un navegador a través de la URL: [http://localhost:4200/](http://localhost:4200/)
