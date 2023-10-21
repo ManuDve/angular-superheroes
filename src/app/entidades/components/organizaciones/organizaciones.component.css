@@ -2,11 +2,11 @@ th, td {
   background-color: var(--main-bg-1)!important;
 }
 
-td[estado*="true"] {
+.publico {
   color: var(--text-color-4);
 }
 
-td[estado*="false"] {
+.oculto {
   color: var(--text-color-3);
 }
 

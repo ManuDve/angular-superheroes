@@ -15,7 +15,9 @@
         <th scope="row" class="py-4">{{ organizacion.id }}</th>
         <td class="py-4">{{ organizacion.nombre }}</td>
         <td class="py-4">{{ organizacion.fecha }}</td>
-        <td class="py-4" [attr.estado]="organizacion.publico">{{ organizacion.publico ? "Público" : "Oculto" }}</td>
+        <td class="py-4"
+        [ngClass]="organizacion.publico ? 'publico' : 'oculto'"
+        >{{ organizacion.publico ? "Público" : "Oculto" }}</td>
         <td class="py-4">
           <button type="button" class="btn btn-danger" (click)="onDelete(organizacion.id, organizacion.nombre)">Eliminar</button>
         </td>
