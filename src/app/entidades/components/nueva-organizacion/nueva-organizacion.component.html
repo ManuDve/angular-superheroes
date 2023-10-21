@@ -1,0 +1,42 @@
+<h1 class="text-center my-5">Agregar Organización</h1>
+<form [formGroup]="organizacionForm" (ngSubmit)="onSubmit(
+  organizacionForm.value.nombre,
+  organizacionForm.value.fecha,
+  organizacionForm.value.publico
+  )" autocomplete="off">
+  <div class="mb-3">
+    <label for="input-nombre-org" class="form-label">Nombre de la Organización</label>
+    <input type="text"class="form-control" id="input-nombre-org" aria-describedby="emailHelp" formControlName="nombre"
+    [ngClass]="{
+      'is-valid': isValidField('nombre'),
+      'is-invalid': !organizacionForm.controls['nombre'].pristine && organizacionForm.controls['nombre'].errors
+    }"
+    >
+    <span *ngIf="!isValidField('nombre') && getFieldError('nombre', 'required')" class="invalid-feedback">
+      Ingrese un nombre.
+    </span>
+    <span *ngIf="!isValidField('nombre')  && getFieldError('nombre', 'minlength')" class="invalid-feedback">
+      El nombre debe ser de al menos 4 caracteres
+    </span>
+  </div>
+  <div class="mb-3">
+    <label for="input-fecha-org" class="form-label">Fecha de aparición</label>
+    <input type="text" class="form-control" id="input-fecha-org" formControlName="fecha" required
+    [ngClass]="{
+      'is-valid': isValidField('fecha'),
+      'is-invalid': !organizacionForm.controls['fecha'].pristine && organizacionForm.controls['fecha'].errors
+    }"
+    >
+    <span *ngIf="!isValidField('fecha') && getFieldError('fecha', 'required')" class="invalid-feedback">
+      Ingrese una fecha
+    </span>
+    <span *ngIf="!isValidField('fecha') && getFieldError('fecha', 'pattern')" class="invalid-feedback">
+      Debe ser en formato YYYY-MM-DD, ejemplo: 1976-11-03
+    </span>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="es-publico-check" formControlName="publico" checked>
+    <label class="form-check-label" for="es-publico-check">Es pública</label>
+  </div>
+  <button type="submit" class="btn btn-success">Crear</button>
+</form>

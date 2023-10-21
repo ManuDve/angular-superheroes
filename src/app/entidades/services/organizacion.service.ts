@@ -19,6 +19,16 @@ export class OrganizacionService {
     })
   }
 
+  createOrganizacion(body:Organizacion):void {
+    this.http.post<Organizacion>(this.apiUrl, body)
+      .subscribe(
+        ()=>{
+          alert(`${body.nombre} se ha creado correctamente!`)
+          this.listarOrganizaciones();
+        }
+      )
+  }
+
   deleteOrganizacion(id:number):void {
     this.http.delete<Organizacion>(`${this.apiUrl}/${id}`)
     .subscribe(
